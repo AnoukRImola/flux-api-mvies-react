@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import ComponenteHijo1 from '../components/ComponenteHijo1'
 import ComponenteHijo2 from '../components/ComponenteHijo2'
 import ComponenteHijo3 from '../components/ComponenteHijo3'
+import ComponenteHijo4 from '../components/ComponenteHijo4';
 
 
 const Demo = () => {
@@ -15,6 +16,7 @@ const Demo = () => {
       <ComponenteHijo1/>
       <ComponenteHijo2/>
       <ComponenteHijo3/>
+      <ComponenteHijo4/>
       <br />
       <Link to="/" className="btn btn-primary">Ir a Inicio</Link>
     </div>
