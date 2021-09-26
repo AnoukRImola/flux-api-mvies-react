@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react'
+import React, { useState, useEffect, createContext } from 'react';
 import getState from "./flux.js"; //importamos getState
 
   // exportamos el contexto
@@ -32,5 +32,5 @@ import getState from "./flux.js"; //importamos getState
   };
 
 //exportamos el proveedor
-export default MyContextProvider
+export default MyContextProvider;
 

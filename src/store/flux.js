@@ -1,33 +1,42 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: "No hay color"
+			peliculas: [],
+			programas: [],
+			personas: [],
+			peliculaDetalle: [],
+			programaDetalle: [],
 		},
 		actions: {
-			// Usa getActions para llamar una function dentro de una fuction. Te dejo un ejemplo
-			exampleFunction: () => {
-				getActions().changeColor("green");
-			},
             //funcion de ejemplo para hacer peticiones fetch
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ demo: data.bar }))
-				*/
-			},
-			changeColor: (color) => {
-                //actualiza un dato de la global store
-                setStore({ demo: color });
+			// loadSomeData: () => {
+			// 	/**
+			// 		fetch().then().then(data => setStore({ demo: data.bar }))
+			// 	*/
+			// },
+			loadPeliculas: () => {
                 
-				//Para obtener datos de la store y usarlos como en el ejemplo de la linea 23 a la 26
-				// const store = getStore();
+					fetch('https://api.themoviedb.org/3/movie/popular?api_key=d6090b4ce2a41ad46da7767f56682434')
+					.then((response) => response.json())
+					.then((data) =>  setStore({peliculas: data.results}));
+			},
+			loadProgramas: () => {
 
-				//suponiendo que demo es un array con datos  
-				//con colores predefinidos
-				// const demo = store.demo.map((elm, i) => {
-				// 	if (i === index) elm = color;
-				// 	return elm;
-				// });
+				fetch('https://api.themoviedb.org/3/tv/popular?api_key=d6090b4ce2a41ad46da7767f56682434')
+				.then((response) => response.json())
+				.then((data) =>  setStore({programas: data.results}));
+			},
+			loadPersonas: () => {
 
+				fetch('https://api.themoviedb.org/3/person/popular?api_key=d6090b4ce2a41ad46da7767f56682434')
+				.then((response) => response.json())
+				.then((data) =>  setStore({personas: data.results}));
+			},
+			loadPeliDetalles: (id) => {
+
+				fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=d6090b4ce2a41ad46da7767f56682434`)
+				.then((response) => response.json())
+				.then((data) =>  setStore({peliDetalles: data.results}));
 			}
 		}
 	};
