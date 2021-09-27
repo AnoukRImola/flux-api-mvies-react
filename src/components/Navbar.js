@@ -1,12 +1,15 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
-    <div className="container-fluid px-0">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary px-5">
-        <p className="navbar-brand" style={{fontSize:'1.8rem'}}>
-          #Programadesdetucasa
-        </p>
-      </nav>
-    </div>
+    <div className="nav d-flex justify-content-center align-items-center">
+          <ul className="d-flex list-unstyled ">
+        <Link to="/" style={{ textDecoration: 'none' }}><li>Inicio</li></Link> 
+        <Link to="/peliculas" style={{ textDecoration: 'none' }}><li>Películas</li></Link>
+        <Link to="/programas" style={{ textDecoration: 'none' }}><li>Tv Shows</li></Link>
+        <Link to="personas" style={{ textDecoration: 'none' }}><li>Actores</li></Link>
+          </ul>
+      </div>    
   );
 };
 

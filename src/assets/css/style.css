@@ -1,0 +1,26 @@
+
+/*Navbar*/
+.nav{
+    background: #FE424F;
+    height: 5rem;
+}
+
+li{
+    padding: 0.5rem;
+    background: #FE424F;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.card{
+    border: none;
+}

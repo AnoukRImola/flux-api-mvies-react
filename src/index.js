@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
 //importamos el archivo index.css dentro de nuestro proyecto
-import './assets/css/index.css'
+import './assets/css/style.css'
 import App from './App'
 import MyContextProvider from './store/appContext'
 

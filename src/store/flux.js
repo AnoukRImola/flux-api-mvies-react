@@ -4,8 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			peliculas: [],
 			programas: [],
 			personas: [],
-			peliculaDetalle: [],
-			programaDetalle: [],
+			proximas: [],
+			populares: []
 		},
 		actions: {
             //funcion de ejemplo para hacer peticiones fetch
@@ -32,11 +32,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then((response) => response.json())
 				.then((data) =>  setStore({personas: data.results}));
 			},
-			loadPeliDetalles: (id) => {
+			loadProximas: () => {
 
-				fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=d6090b4ce2a41ad46da7767f56682434`)
+				fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=d6090b4ce2a41ad46da7767f56682434&language=en-US&page=1`)
 				.then((response) => response.json())
-				.then((data) =>  setStore({peliDetalles: data.results}));
+				.then((data) =>  setStore({proximas: data.results}));
+			},
+			loadPopulares: () => {
+
+				fetch(`https://api.themoviedb.org/3/movie/popular?api_key=d6090b4ce2a41ad46da7767f56682434&language=en-US&page=1`)
+				.then((response) => response.json())
+				.then((data) =>  setStore({populares: data.results}));
 			}
 		}
 	};

@@ -1,21 +1,17 @@
-import logo from '../assets/img/logo-circular-texto.png'
-import {Link} from 'react-router-dom'
+import Proximas from './Proximas';
+import Populares from './Populares';
+
 
 const Home = () => {
   return (
-    <div className="jumbotron">
-    <div className="row w-100">
-        <div className="col-lg-6 pt-5 px-5">
-      <h1 style={{fontSize:'4rem'}}>React Flux template</h1>
+    <div>
+      <h1>Próximas</h1>
+      <Proximas />
       <br />
-      <Link className="btn btn-primary btn-lg" href="#" role="button" to="/demo">
-        Ir a Demo
-      </Link>
-        </div>
-        <div className="col-lg-6">
-        <img src={logo} alt="" style={{width:'25rem'}}/>
-        </div>
-    </div>
+      <br />
+      <br />
+      <h1>Populares</h1>
+      <Populares />
     </div>
   );
 };
