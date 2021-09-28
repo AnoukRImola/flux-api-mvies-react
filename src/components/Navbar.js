@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const {store} =useContext(Context)
   return (
     <div className="nav d-flex justify-content-center align-items-center">
           <ul className="d-flex list-unstyled ">
@@ -8,6 +11,7 @@ const Navbar = () => {
         <Link to="/peliculas" style={{ textDecoration: 'none' }}><li>Películas</li></Link>
         <Link to="/programas" style={{ textDecoration: 'none' }}><li>Tv Shows</li></Link>
         <Link to="personas" style={{ textDecoration: 'none' }}><li>Actores</li></Link>
+        <li>{store.favoritos} </li>
           </ul>
       </div>    
   );
