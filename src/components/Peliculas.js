@@ -1,11 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import {Context} from '../store/appContext'
-import { Card , Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { StarFill } from 'react-bootstrap-icons';
 
 export const Peliculas = (props) => {
-    //esto ahora se destructura como actions
+    
     const { store, actions } = useContext(Context);
 
     useEffect(()=>{
@@ -17,14 +16,20 @@ export const Peliculas = (props) => {
     return (
         <div className="section">
             {store.peliculas.length> 0 ? store.peliculas.map((item=>
-            <Card className="mx-2" style={{ width: '14rem' }}>
-                <Card.Img variant="top" src={"https://image.tmdb.org/t/p/original" +item.poster_path} />
-                <Card.Body className="px-0 ">
-                    <Link to={`/peliculas/`+ item.id} className="text-white" ><Card.Title>{item.title}</Card.Title></Link>
-                    {/* <Button variant="primary" onClick={()=>{actions.addFavoritos()}} >Primary</Button> */}
-                    <Card.Text>{item.date} vfv</Card.Text> 
-                </Card.Body>
-            </Card>)):null}
+            <div className="card border-0" style={{width: "15rem"}}>
+                <img src={"https://image.tmdb.org/t/p/original" + item.poster_path} className="card-img-top" alt="..." />
+                <div className="card-body px-0">
+                     <Link to={"/peliculas/"+props.id}><h5 className="card-title text-white">{item.title}</h5></Link> 
+                     <div className="row">
+                        <div className="col-8">
+                             <p className="card-text text-secondary m-0">{item.release_date}</p>
+                        </div>
+                        <div className="col-4">
+                              <p className="card-text text-info"><StarFill className="star"/> {item.vote_average}</p>  
+                        </div>
+                     </div>           
+                </div>
+             </div>)):null}
         </div>
     )
 }

@@ -13,7 +13,7 @@ const ProgramaDetalle = () => {
         .then(data =>  {setProgramaDetalles(data)});
     },[]);    
 
-    console.log(programaDetalles)
+    console.log(programaDetalles);
     
     return ( 
         <div classNameName="container p-0 mt-5" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
@@ -41,8 +41,7 @@ const ProgramaDetalle = () => {
                         </div>
                     </div>
                </div>
-            </div>
-            
+            </div> 
         </div>
      );
 }

@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    background: #222A31;
+    background: black;
 }
 
 /*Navbar*/
@@ -10,7 +10,7 @@
     height: 5rem;
 }
 
-li{
+.nav li{
     padding: 0.5rem;
     background: #FE424F;
     color: white;
@@ -28,4 +28,90 @@ li{
 
 .card{
     border: none;
+    margin: 1rem;
+}
+
+.star{
+    font-size: 0.9rem;
+    padding-bottom: 2px;
+}
+
+.section-scroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    margin-bottom: 5rem;
+}
+
+.scroll-container{
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    position: relative;
+    width: 90vw;
+}
+
+.scroll-item{
+    overflow: hidden;
+    display: inline-block;
+}
+
+.scroll-container::-webkit-scrollbar{
+    height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb{
+    background: rgb(79, 77, 88);
+    border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 4px;
+}
+
+.section-scroll h2{
+    color: white;
+}
+
+.carousel{
+    background: none;
+}
+
+.home h1{
+    color: white;
+    margin-left: 5rem;
+}
+
+footer{
+    border-top: 1px solid gray;
+    display: flex;
+    flex-flow: column;
+    padding-top: 1rem;
+}
+
+footer ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    list-style: none;
+    margin-top: 0.3rem;
+}
+
+footer ul li{
+    font-size: 1rem;
+    margin-right: 1.5rem;
+}
+
+@media (min-width:320px) and (max-width:600px){
+
+    .home h1{
+        margin-left: 2rem; 
+    }
+
+    .section-scroll{
+        margin-bottom: 2rem;
+    }
+
 }

@@ -1,17 +1,18 @@
 import Proximas from './Proximas';
 import Populares from './Populares';
+import Carrusel from '../components/Carrusel';
 
 
 const Home = () => {
   return (
     <div>
+      <Carrusel />
+      <div className="home">
       <h1>Próximas</h1>
       <Proximas />
-      <br />
-      <br />
-      <br />
       <h1>Populares</h1>
       <Populares />
+      </div>
     </div>
   );
 };
