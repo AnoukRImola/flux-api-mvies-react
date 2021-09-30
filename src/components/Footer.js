@@ -1,4 +1,3 @@
-// import { Facebook } from "react-bootstrap-icons";
 import { FaFacebook, FaInstagramSquare, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {

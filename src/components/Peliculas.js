@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import {Context} from '../store/appContext'
 import { Link } from 'react-router-dom';
 import { StarFill } from 'react-bootstrap-icons';
+import { BsHeartFill } from 'react-icons/bs';
 
 export const Peliculas = (props) => {
     
@@ -21,11 +22,18 @@ export const Peliculas = (props) => {
                 <div className="card-body px-0">
                      <Link to={"/peliculas/"+props.id}><h5 className="card-title text-white">{item.title}</h5></Link> 
                      <div className="row">
-                        <div className="col-8">
+                        <div>
                              <p className="card-text text-secondary m-0">{item.release_date}</p>
                         </div>
-                        <div className="col-4">
-                              <p className="card-text text-info"><StarFill className="star"/> {item.vote_average}</p>  
+                     </div>   
+                     <div className="row">
+                        <div className="col-10">
+                              <p className="card-text text-warning"><StarFill className="star"/> {item.vote_average}</p>  
+                        </div>
+                        <div className="col-2">
+                            <Link className="text-danger">
+                                <BsHeartFill/>
+                            </Link>
                         </div>
                      </div>           
                 </div>
