@@ -19,7 +19,7 @@ export const Programas = (props) => {
             <div className="card border-0" style={{width: "15rem"}}>
                 <img src={"https://image.tmdb.org/t/p/original" + item.poster_path} className="card-img-top" alt="..." />
                 <div className="card-body px-0">
-                  <Link to={"/programas/"+ props.id}><h5 className="card-title text-white">{item.name}</h5></Link>  
+                  <Link to={"/programas/"+ item.id}><h5 className="card-title text-white">{item.name}</h5></Link>  
                   <div className="row">
                     <div className="col-9">
                         <p className="card-text text-secondary m-0">{item.first_air_date}</p>

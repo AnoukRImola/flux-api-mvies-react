@@ -6,6 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			personas: [],
 			proximas: [],
 			populares: [],
+			calificacion: [],
 			favoritos: []
 		},
 		actions: {
@@ -38,6 +39,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(`https://api.themoviedb.org/3/movie/popular?api_key=d6090b4ce2a41ad46da7767f56682434&language=en-US&page=1`)
 				.then((response) => response.json())
 				.then((data) =>  setStore({populares: data.results}));
+			},
+			loadCalificacion: () =>{
+
+				fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=d6090b4ce2a41ad46da7767f56682434&language=en-US&page=1`)
+				.then((response) => response.json())
+				.then((data) =>  setStore({calificacion: data.results}));
 			},
 			addFavoritos: favorito => {
 				setStore({

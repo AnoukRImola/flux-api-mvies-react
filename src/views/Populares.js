@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import {Context} from '../store/appContext'
+import {Context} from '../store/appContext';
 
 export const Populares = (props) => {
     //esto ahora se destructura como actions

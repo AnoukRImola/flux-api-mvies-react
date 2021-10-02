@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Clock, Eye, Star } from 'react-bootstrap-icons';
-import {Link} from "react-router-dom";
+
 
 const PeliculaDetalle = () => {
     const {id} = useParams();
@@ -10,7 +10,7 @@ const PeliculaDetalle = () => {
     useEffect(()=>{
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=d6090b4ce2a41ad46da7767f56682434`)
         .then(response => response.json())
-        .then(data =>  {setPeliculaDetalles(data)});
+        .then(data =>  setPeliculaDetalles(data));
     },[]);    
 
     console.log(peliculaDetalles);

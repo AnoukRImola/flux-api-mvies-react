@@ -20,7 +20,7 @@ export const Peliculas = (props) => {
             <div className="card border-0" style={{width: "15rem"}}>
                 <img src={"https://image.tmdb.org/t/p/original" + item.poster_path} className="card-img-top" alt="..." />
                 <div className="card-body px-0">
-                     <Link to={"/peliculas/"+props.id}><h5 className="card-title text-white">{item.title}</h5></Link> 
+                     <Link to={"/peliculas/"+item.id}><h5 className="card-title text-white">{item.title}</h5></Link> 
                      <div className="row">
                         <div>
                              <p className="card-text text-secondary m-0">{item.release_date}</p>
@@ -32,7 +32,7 @@ export const Peliculas = (props) => {
                         </div>
                         <div className="col-2">
                             <Link className="text-danger">
-                                <BsHeartFill/>
+                               <BsHeartFill/>
                             </Link>
                         </div>
                      </div>           
