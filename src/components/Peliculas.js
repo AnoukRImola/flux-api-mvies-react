@@ -32,7 +32,7 @@ export const Peliculas = (props) => {
                         </div>
                         <div className="col-2">
                             <Link className="text-danger">
-                               <BsHeartFill/>
+                               <BsHeartFill onClick={(item)=> <p>{item.title}</p> }/>
                             </Link>
                         </div>
                      </div>           

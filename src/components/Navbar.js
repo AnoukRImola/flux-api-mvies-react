@@ -3,7 +3,8 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const {store} =useContext(Context)
+  const {action} = useContext(Context);
+ 
   return (
     <div className="nav d-flex justify-content-center align-items-center">
           <ul className="d-flex list-unstyled ">
@@ -12,6 +13,7 @@ const Navbar = () => {
             <Link to="/programas" style={{ textDecoration: 'none' }}><li>Tv Shows</li></Link>
             <Link to="/personas" style={{ textDecoration: 'none' }}><li>Actores</li></Link>
           </ul>
+          {/* <p>{}</p> */}
       </div>    
   );
 };
