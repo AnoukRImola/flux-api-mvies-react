@@ -7,16 +7,14 @@
 
 /*Navbar*/
 .navbar{
-    background: #FE424F;
-    height: 10rem;
+    height: 6rem;
 }
 
-.nav li{
-    padding: 0.5rem;
-    background: #FE424F;
-    color: white;
-    text-decoration: none;
+#navbarNavDropdown{
+    display: flexbox;
+    justify-content: center;
 }
+
 
 /*section principales*/
 .section{
@@ -77,8 +75,14 @@
 }
 
 /*carrusel-home*/
+.carrusel{
+    display: flex;
+    justify-content: center;
+}
+
 .carousel{
     background: none;
+    width: 70%;
 }
 
 .home h1{
@@ -127,4 +131,11 @@ footer ul li a:hover{
         margin-bottom: 2rem;
     }
 
+    .navbar{
+        height: initial;
+    }
+
+    .carousel{
+        width: 100%;
+    }
 }

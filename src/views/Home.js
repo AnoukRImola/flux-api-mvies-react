@@ -6,7 +6,7 @@ import PeliCalificacion from '../components/PeliCalificacion';
 
 const Home = () => {
   return (
-    <div>
+    <div>   
       <Carrusel />
       <div className="home">
       <h1>Mejor Calificación</h1>  

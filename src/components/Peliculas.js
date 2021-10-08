@@ -3,6 +3,7 @@ import {Context} from '../store/appContext'
 import { Link } from 'react-router-dom';
 import { StarFill } from 'react-bootstrap-icons';
 import { BsHeartFill } from 'react-icons/bs';
+import Cargando from './Cargando';
 
 export const Peliculas = (props) => {
     
@@ -32,12 +33,12 @@ export const Peliculas = (props) => {
                         </div>
                         <div className="col-2">
                             <Link className="text-danger">
-                               <BsHeartFill onClick={(item)=> <p>{item.title}</p> }/>
+                               <BsHeartFill onClick={()=> actions.addFavoritos(item.title) }/>
                             </Link>
                         </div>
                      </div>           
                 </div>
-             </div>)):null}
+             </div>)):<Cargando/>}
         </div>
     )
 }

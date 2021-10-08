@@ -11,7 +11,7 @@ const Carrusel = () => {
     
     console.log(store);
     return(
-        <div>
+        <div className="carrusel">
             <div id="carouselExampleCaptions" className="carousel slide mb-5" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     {store.peliculas.map((item,index)=>

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import {Context} from '../store/appContext'
+import Cargando from './Cargando';
 
 export const Personas = (props) => {
     
@@ -19,7 +20,7 @@ export const Personas = (props) => {
                 <div className="card-body px-0">
                     <h5 className="card-title text-white">{item.name}</h5>
                 </div>
-            </div>)):null}
+            </div>)):<Cargando/>}
         </div>
     )
 }

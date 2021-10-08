@@ -51,10 +51,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					favoritos: getStore().favoritos.concat(favorito)
 				});
 			}
-			// removFavoritos: favorito => {
+			// removFavoritos: removFav => {
 			// 	setStore({
 			// 		favoritos: getStore().favoritos.filter((item , index) {
-			// 			if (favorito.id !== item.id) {
+			// 			if (removFav.id !== item.id) {
 			// 				return item;
 			// 			}
 			// 		})

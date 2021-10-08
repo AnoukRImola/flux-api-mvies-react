@@ -2,6 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import {Context} from '../store/appContext';
 import { Link } from 'react-router-dom';
 import { StarFill } from 'react-bootstrap-icons';
+import { BsHeartFill } from 'react-icons/bs';
+import Cargando from './Cargando';
 
 export const Programas = (props) => {
    
@@ -21,15 +23,22 @@ export const Programas = (props) => {
                 <div className="card-body px-0">
                   <Link to={"/programas/"+ item.id}><h5 className="card-title text-white">{item.name}</h5></Link>  
                   <div className="row">
-                    <div className="col-9">
+                    <div>
                         <p className="card-text text-secondary m-0">{item.first_air_date}</p>
                     </div>
-                    <div className="col-3">
-                        <p className="card-text text-danger"><StarFill className="star"/> {item.vote_average}</p>  
+                  </div>   
+                  <div className="row">
+                     <div className="col-10">
+                        <p className="card-text text-warning"><StarFill className="star"/> {item.vote_average}</p>  
+                    </div>
+                    <div className="col-2">
+                            <Link className="text-danger">
+                               <BsHeartFill onClick={()=> actions.addFavoritos(item.name) }/>
+                            </Link>
                     </div>
                   </div>          
                 </div>
-            </div>)):null}
+            </div>)):<Cargando/>}
         </div>
     )
 }
