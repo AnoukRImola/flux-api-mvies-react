@@ -2,19 +2,41 @@ import { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
+
+
+
 const Navbar = () => {
   const {action} = useContext(Context);
  
   return (
-    <div className="nav d-flex justify-content-center align-items-center">
-          <ul className="d-flex list-unstyled ">
-            <Link to="/" style={{ textDecoration: 'none' }}><li>Inicio</li></Link> 
-            <Link to="/peliculas" style={{ textDecoration: 'none' }}><li>Películas</li></Link>
-            <Link to="/programas" style={{ textDecoration: 'none' }}><li>Tv Shows</li></Link>
-            <Link to="/personas" style={{ textDecoration: 'none' }}><li>Actores</li></Link>
+    <nav className="navbar navbar-expand-lg">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">Poderío</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/demo">Demo</Link>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Prueba de que bootstrap Js funciona
+              </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a className="dropdown-item" >Action</a></li>
+                <li><a className="dropdown-item" >Another action</a></li>
+                <li><a className="dropdown-item" >Something else here</a></li>
+              </ul>
+            </li>
           </ul>
-          {/* <p>{}</p> */}
-      </div>    
+        </div>
+      </div>
+    </nav>
   );
 };
 

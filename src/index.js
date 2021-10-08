@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //importamos estilos y JS bootstrap dentro de nuestro proyecto
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 //importamos el archivo index.css dentro de nuestro proyecto
 import './assets/css/style.css'
 import App from './App'
