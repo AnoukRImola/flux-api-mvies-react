@@ -16,22 +16,22 @@ function App() {
     <Router>
     <Navbar/>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="flux-api-mvies-react/">
         <Home/>
         </Route>
-        <Route exact path="/peliculas">
+        <Route exact path="flux-api-mvies-react/peliculas">
           <Peliculas/>
         </Route>
-        <Route exact path="/peliculas/:id">
+        <Route exact path="flux-api-mvies-react/peliculas/:id">
           <PeliculaDetalle/>
         </Route>
-        <Route exact path="/programas">
+        <Route exact path="flux-api-mvies-react/programas">
           <Programas/>
         </Route>
-        <Route exact path="/programas/:id">
+        <Route exact path="flux-api-mvies-react/programas/:id">
           <ProgramaDetalle/>
         </Route>
-        <Route exact path="/personas">
+        <Route exact path="flux-api-mvies-react/personas">
           <Personas/>
         </Route>
         <Route exact path="*">
