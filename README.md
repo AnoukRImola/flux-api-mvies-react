@@ -27,9 +27,9 @@ Una vez instalada la carpeta de node_modules, levantaremos el proyecto con el co
 ## Construido con 🔨:
 En éste proyecto se utilizaron las siguientes tecnologías:
 
-* -NPM
-* -React
-* -Bootstrap
-* -Css
-* -JSX
+* NPM
+* React
+* Bootstrap
+* Css
+* JSX
 
